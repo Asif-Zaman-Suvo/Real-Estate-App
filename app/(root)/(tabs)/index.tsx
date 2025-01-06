@@ -11,8 +11,8 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text className="text-red-600 text-lg font-bold py-10">
-        Welcome to the real estate app test
+      <Text className="font-bold my-10 font-rubik text-3xl">
+        Welcome to the real estate
       </Text>
       <Link href="/sign-in">Sign In</Link>
       <Link href="/explore">Explore</Link>
