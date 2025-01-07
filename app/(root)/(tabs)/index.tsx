@@ -12,7 +12,7 @@ export default function Index() {
       }}
     >
       <Text className="font-bold my-10 font-rubik text-3xl">
-        Welcome to the real estate
+        Welcome to ReState
       </Text>
       <Link href="/sign-in">Sign In</Link>
       <Link href="/explore">Explore</Link>
