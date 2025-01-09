@@ -49,3 +49,29 @@ export async function login() {
     return false;
   }
 }
+
+export async function logout() {
+  try {
+    await account.deleteSession("current");
+    return true;
+  } catch (error) {
+    console.log(error);
+    return false;
+  }
+}
+
+export async function getCurrentUser() {
+  try {
+    const response = await account.get();
+    if (response.$id) {
+      const userAvatar = avatar.getInitials(response.name);
+      return {
+        ...response,
+        avatar: userAvatar.toString(),
+      };
+    }
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
